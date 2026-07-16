@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Marcellus&amp;family=Hind+Chennai:wght@700&amp;display=swap');
+    .arc { font-family: 'Marcellus', Georgia, serif; }
+    .tamil { font-family: 'Hind Chennai', sans-serif; }
+  </style>
+  <defs>
+    <linearGradient id="jarG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8b64c"/><stop offset="1" stop-color="#b9862c"/>
+    </linearGradient>
+    <linearGradient id="leafG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b8a43"/><stop offset="1" stop-color="#33531f"/>
+    </linearGradient>
+    <path id="arcTop" d="M 58 200 A 142 142 0 0 1 342 200" fill="none"/>
+    <path id="arcBot" d="M 50 200 A 150 150 0 0 0 350 200" fill="none"/>
+    <clipPath id="jarClip">
+      <path d="M 180 140 C 176 154 158 164 154 190 C 150 218 168 244 182 252 L 218 252 C 232 244 250 218 246 190 C 242 164 224 154 220 140 Z"/>
+    </clipPath>
+  </defs>
+
+  <circle cx="200" cy="200" r="197" fill="#f9f1dd" stroke="#6d2417" stroke-width="4"/>
+  <circle cx="200" cy="200" r="189" fill="none" stroke="#97392b" stroke-width="1.5"/>
+  <circle cx="200" cy="200" r="177" fill="none" stroke="#b98a2f" stroke-width="4.5" stroke-dasharray="0.1 13.8" stroke-linecap="round" opacity="0.9"/>
+
+  <text class="arc" font-size="25" letter-spacing="4" fill="#6d2417">
+    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">PICKLES BY GIRIJA</textPath>
+  </text>
+  <text class="arc" font-size="14.5" letter-spacing="3.5" fill="#97392b">
+    <textPath href="#arcBot" startOffset="50%" text-anchor="middle">HOMEMADE&#160;&#160;•&#160;&#160;TRADITIONAL</textPath>
+  </text>
+
+  <circle cx="200" cy="200" r="118" fill="#fdf7e8" stroke="#97392b" stroke-width="2"/>
+  <circle cx="200" cy="200" r="112" fill="none" stroke="#b98a2f" stroke-width="1"/>
+
+  <g fill="#97392b">
+    <circle cx="200" cy="103" r="2.6"/>
+    <circle cx="190" cy="110" r="1.8"/><circle cx="210" cy="110" r="1.8"/>
+    <circle cx="200" cy="117" r="1.8"/>
+  </g>
+
+  <g fill="url(#leafG)" stroke="#33531f" stroke-width="1">
+    <path d="M 148 176 C 132 168 118 168 106 176 C 116 188 132 192 148 188 Z"/>
+    <path d="M 150 204 C 134 202 120 206 110 216 C 122 226 138 226 152 218 Z"/>
+    <path d="M 252 176 C 268 168 282 168 294 176 C 284 188 268 192 252 188 Z"/>
+    <path d="M 250 204 C 266 202 280 206 290 216 C 278 226 262 226 248 218 Z"/>
+  </g>
+
+  <path d="M 180 140 C 176 154 158 164 154 190 C 150 218 168 244 182 252 L 218 252 C 232 244 250 218 246 190 C 242 164 224 154 220 140 Z"
+        fill="url(#jarG)" stroke="#6d2417" stroke-width="2.5" stroke-linejoin="round"/>
+  <g clip-path="url(#jarClip)">
+    <rect x="148" y="206" width="104" height="12" fill="#97392b"/>
+    <circle cx="170" cy="212" r="1.7" fill="#f9f1dd"/>
+    <circle cx="185" cy="212" r="1.7" fill="#f9f1dd"/>
+    <circle cx="200" cy="212" r="1.7" fill="#f9f1dd"/>
+    <circle cx="215" cy="212" r="1.7" fill="#f9f1dd"/>
+    <circle cx="230" cy="212" r="1.7" fill="#f9f1dd"/>
+    <path d="M 168 146 C 160 176 158 216 168 248" stroke="#ffffff" stroke-width="7" opacity="0.22" fill="none"/>
+  </g>
+  <ellipse cx="200" cy="140" rx="27" ry="10.5" fill="#e8b64c" stroke="#6d2417" stroke-width="2"/>
+  <path d="M 175 144 Q 200 153 225 144" stroke="#6d2417" stroke-width="1.6" fill="none"/>
+  <circle cx="200" cy="132" r="4" fill="#97392b" stroke="#6d2417" stroke-width="1"/>
+
+  <g>
+    <path d="M 164 258 C 154 262 146 272 148 282 C 156 278 164 270 168 262 Z" fill="#a93b26" stroke="#6d2417" stroke-width="1"/>
+    <circle cx="167" cy="259" r="2.4" fill="#33531f"/>
+    <path d="M 236 258 C 246 262 254 272 252 282 C 244 278 236 270 232 262 Z" fill="#a93b26" stroke="#6d2417" stroke-width="1"/>
+    <circle cx="233" cy="259" r="2.4" fill="#33531f"/>
+    <circle cx="186" cy="266" r="2" fill="#b98a2f"/>
+    <circle cx="200" cy="270" r="2" fill="#b98a2f"/>
+    <circle cx="214" cy="266" r="2" fill="#b98a2f"/>
+  </g>
+
+  <path d="M 128 288 L 104 298 L 130 307 Z" fill="#6d2417"/>
+  <path d="M 272 288 L 296 298 L 270 307 Z" fill="#6d2417"/>
+  <path d="M 128 286 L 272 286 L 264 308 L 136 308 Z" fill="#97392b" stroke="#6d2417" stroke-width="1.5"/>
+  <text class="tamil" x="200" y="302.5" text-anchor="middle" font-size="16" font-weight="700" fill="#f9f1dd">ஊறுகாய்</text>
+
+  <g fill="#b98a2f">
+    <circle cx="200" cy="322" r="2.2"/>
+    <circle cx="190" cy="320" r="1.4"/><circle cx="210" cy="320" r="1.4"/>
+  </g>
+</svg>
