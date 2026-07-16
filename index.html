@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pickles by Girija — கிரிஜா வீட்டு ஊறுகாய் · Traditional Tamil Homemade Pickles</title>
+  <meta name="description" content="Small-batch homemade Tamil pickles handcrafted by Girija in Chennai. Amma's recipes, sun-cured, stone-ground, aged in bharani jars." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Hind+Chennai:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- fixed decorative layer: swaying banana leaves -->
+  <div class="bg-decor" aria-hidden="true">
+    <svg class="banana-leaf leaf-left" viewBox="0 0 220 520">
+      <defs>
+        <linearGradient id="bnlG1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#5b8a43"/><stop offset="1" stop-color="#33531f"/>
+        </linearGradient>
+      </defs>
+      <path d="M110 10 C 170 60 192 200 180 340 C 172 432 142 498 110 514 C 78 498 48 432 40 340 C 28 200 50 60 110 10 Z" fill="url(#bnlG1)"/>
+      <path d="M110 14 L 110 510" stroke="#e9dfc2" stroke-width="5" opacity="0.5"/>
+      <g stroke="#e9dfc2" stroke-width="2" opacity="0.28">
+        <path d="M110 80 L 168 120"/><path d="M110 80 L 52 120"/>
+        <path d="M110 160 L 176 205"/><path d="M110 160 L 44 205"/>
+        <path d="M110 240 L 178 288"/><path d="M110 240 L 42 288"/>
+        <path d="M110 320 L 172 366"/><path d="M110 320 L 48 366"/>
+        <path d="M110 400 L 160 440"/><path d="M110 400 L 60 440"/>
+      </g>
+    </svg>
+    <svg class="banana-leaf leaf-right" viewBox="0 0 220 520">
+      <defs>
+        <linearGradient id="bnlG2" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#5b8a43"/><stop offset="1" stop-color="#33531f"/>
+        </linearGradient>
+      </defs>
+      <path d="M110 10 C 170 60 192 200 180 340 C 172 432 142 498 110 514 C 78 498 48 432 40 340 C 28 200 50 60 110 10 Z" fill="url(#bnlG2)"/>
+      <path d="M110 14 L 110 510" stroke="#e9dfc2" stroke-width="5" opacity="0.5"/>
+      <g stroke="#e9dfc2" stroke-width="2" opacity="0.28">
+        <path d="M110 80 L 168 120"/><path d="M110 80 L 52 120"/>
+        <path d="M110 160 L 176 205"/><path d="M110 160 L 44 205"/>
+        <path d="M110 240 L 178 288"/><path d="M110 240 L 42 288"/>
+        <path d="M110 320 L 172 366"/><path d="M110 320 L 48 366"/>
+        <path d="M110 400 L 160 440"/><path d="M110 400 L 60 440"/>
+      </g>
+    </svg>
+  </div>
+
+  <header class="site-header">
+    <a href="#top" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="40" height="40">
+          <circle cx="24" cy="24" r="22" fill="#f9f1dd" stroke="#6d2417" stroke-width="2"/>
+          <circle cx="24" cy="24" r="18.5" fill="none" stroke="#b98a2f" stroke-width="1.6" stroke-dasharray="0.1 4.6" stroke-linecap="round"/>
+          <path d="M20.5 14 C 20 16 17.5 17.5 17 21 C 16.5 25 19 28.5 21 29.5 L 27 29.5 C 29 28.5 31.5 25 31 21 C 30.5 17.5 28 16 27.5 14 Z" fill="#d9a63e" stroke="#6d2417" stroke-width="1.4" stroke-linejoin="round"/>
+          <ellipse cx="24" cy="14" rx="4.4" ry="2" fill="#e8b64c" stroke="#6d2417" stroke-width="1.2"/>
+          <rect x="17" y="23" width="14" height="2.4" fill="#97392b"/>
+          <path d="M15 33 L 33 33 L 31.5 36.5 L 16.5 36.5 Z" fill="#97392b"/>
+        </svg>
+      </span>
+      <span class="logo-text">
+        <span class="logo-line-1">Pickles by Girija</span>
+        <span class="logo-line-2">கிரிஜா வீட்டு ஊறுகாய்</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav">
+      <a href="#story">Our Story</a>
+      <a href="#jars">The Jars</a>
+      <a href="#craft">How It's Made</a>
+      <a href="#order" class="nav-cta">Order Now</a>
+    </nav>
+  </header>
+
+  <!-- mango-leaf toran garland (leaves added by script.js) -->
+  <div class="toran" aria-hidden="true"><div class="toran-string"></div><div class="toran-row" id="toran-row"></div></div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-watermark" aria-hidden="true">ஊறுகாய்</div>
+      <div class="hero-inner">
+        <p class="eyebrow">வீட்டு ஊறுகாய் · Homemade in Chennai</p>
+        <h1>
+          <span class="hero-line">Amma's recipes.</span>
+          <span class="hero-line">Bottled with love.</span>
+        </h1>
+        <p class="hero-sub">
+          Every jar of <em>Pickles by Girija</em> is sun-cured on the terrace, stone-ground on the ammi, folded by hand, and aged in ceramic bharani jars. The way it has been done in our family for three generations.
+        </p>
+        <div class="hero-cta">
+          <a href="#jars" class="btn btn-primary">Explore the Jars</a>
+          <a href="#story" class="btn btn-ghost">Meet Girija →</a>
+        </div>
+        <div class="hero-badges">
+          <div class="badge"><strong>100%</strong><span>Homemade</span></div>
+          <div class="badge"><strong>0</strong><span>Preservatives</span></div>
+          <div class="badge"><strong>3</strong><span>Generations of Recipes</span></div>
+        </div>
+      </div>
+
+      <div class="hero-emblem" aria-hidden="false">
+        <svg class="badge-svg" viewBox="0 0 400 400" role="img" aria-label="Pickles by Girija — vintage emblem: a bharani pickle jar ringed by kolam dots">
+          <defs>
+            <linearGradient id="jarG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#e8b64c"/><stop offset="1" stop-color="#b9862c"/>
+            </linearGradient>
+            <linearGradient id="leafG" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#5b8a43"/><stop offset="1" stop-color="#33531f"/>
+            </linearGradient>
+            <path id="arcTop" d="M 58 200 A 142 142 0 0 1 342 200" fill="none"/>
+            <path id="arcBot" d="M 50 200 A 150 150 0 0 0 350 200" fill="none"/>
+            <clipPath id="jarClip">
+              <path d="M 180 140 C 176 154 158 164 154 190 C 150 218 168 244 182 252 L 218 252 C 232 244 250 218 246 190 C 242 164 224 154 220 140 Z"/>
+            </clipPath>
+          </defs>
+
+          <!-- outer rings -->
+          <circle cx="200" cy="200" r="197" fill="#f9f1dd" stroke="#6d2417" stroke-width="4"/>
+          <circle cx="200" cy="200" r="189" fill="none" stroke="#97392b" stroke-width="1.5"/>
+          <circle class="kolam-ring" cx="200" cy="200" r="177" fill="none" stroke="#b98a2f" stroke-width="4.5" stroke-dasharray="0.1 13.8" stroke-linecap="round" opacity="0.9"/>
+
+          <!-- curved text -->
+          <text class="badge-arc-text" font-size="25" letter-spacing="4" fill="#6d2417">
+            <textPath href="#arcTop" startOffset="50%" text-anchor="middle">PICKLES BY GIRIJA</textPath>
+          </text>
+          <text class="badge-arc-text" font-size="14.5" letter-spacing="3.5" fill="#97392b">
+            <textPath href="#arcBot" startOffset="50%" text-anchor="middle">HOMEMADE&#160;&#160;•&#160;&#160;TRADITIONAL</textPath>
+          </text>
+
+          <!-- inner medallion -->
+          <circle cx="200" cy="200" r="118" fill="#fdf7e8" stroke="#97392b" stroke-width="2"/>
+          <circle cx="200" cy="200" r="112" fill="none" stroke="#b98a2f" stroke-width="1"/>
+
+          <!-- kolam star accent, top -->
+          <g fill="#97392b">
+            <circle cx="200" cy="103" r="2.6"/>
+            <circle cx="190" cy="110" r="1.8"/><circle cx="210" cy="110" r="1.8"/>
+            <circle cx="200" cy="117" r="1.8"/>
+          </g>
+
+          <!-- mango leaves flanking the jar -->
+          <g fill="url(#leafG)" stroke="#33531f" stroke-width="1">
+            <path d="M 148 176 C 132 168 118 168 106 176 C 116 188 132 192 148 188 Z"/>
+            <path d="M 150 204 C 134 202 120 206 110 216 C 122 226 138 226 152 218 Z"/>
+            <path d="M 252 176 C 268 168 282 168 294 176 C 284 188 268 192 252 188 Z"/>
+            <path d="M 250 204 C 266 202 280 206 290 216 C 278 226 262 226 248 218 Z"/>
+          </g>
+
+          <!-- bharani jar -->
+          <path d="M 180 140 C 176 154 158 164 154 190 C 150 218 168 244 182 252 L 218 252 C 232 244 250 218 246 190 C 242 164 224 154 220 140 Z"
+                fill="url(#jarG)" stroke="#6d2417" stroke-width="2.5" stroke-linejoin="round"/>
+          <g clip-path="url(#jarClip)">
+            <rect x="148" y="206" width="104" height="12" fill="#97392b"/>
+            <circle cx="170" cy="212" r="1.7" fill="#f9f1dd"/>
+            <circle cx="185" cy="212" r="1.7" fill="#f9f1dd"/>
+            <circle cx="200" cy="212" r="1.7" fill="#f9f1dd"/>
+            <circle cx="215" cy="212" r="1.7" fill="#f9f1dd"/>
+            <circle cx="230" cy="212" r="1.7" fill="#f9f1dd"/>
+            <path d="M 168 146 C 160 176 158 216 168 248" stroke="#ffffff" stroke-width="7" opacity="0.22" fill="none"/>
+          </g>
+          <!-- cloth cover tied over the mouth -->
+          <ellipse cx="200" cy="140" rx="27" ry="10.5" fill="#e8b64c" stroke="#6d2417" stroke-width="2"/>
+          <path d="M 175 144 Q 200 153 225 144" stroke="#6d2417" stroke-width="1.6" fill="none"/>
+          <circle cx="200" cy="132" r="4" fill="#97392b" stroke="#6d2417" stroke-width="1"/>
+
+          <!-- chilies & mustard at the base -->
+          <g>
+            <path d="M 164 258 C 154 262 146 272 148 282 C 156 278 164 270 168 262 Z" fill="#a93b26" stroke="#6d2417" stroke-width="1"/>
+            <circle cx="167" cy="259" r="2.4" fill="#33531f"/>
+            <path d="M 236 258 C 246 262 254 272 252 282 C 244 278 236 270 232 262 Z" fill="#a93b26" stroke="#6d2417" stroke-width="1"/>
+            <circle cx="233" cy="259" r="2.4" fill="#33531f"/>
+            <circle cx="186" cy="266" r="2" fill="#b98a2f"/>
+            <circle cx="200" cy="270" r="2" fill="#b98a2f"/>
+            <circle cx="214" cy="266" r="2" fill="#b98a2f"/>
+          </g>
+
+          <!-- ribbon banner -->
+          <path d="M 128 288 L 104 298 L 130 307 Z" fill="#6d2417"/>
+          <path d="M 272 288 L 296 298 L 270 307 Z" fill="#6d2417"/>
+          <path d="M 128 286 L 272 286 L 264 308 L 136 308 Z" fill="#97392b" stroke="#6d2417" stroke-width="1.5"/>
+          <text x="200" y="302.5" text-anchor="middle" font-size="16" font-weight="700" fill="#f9f1dd" class="badge-tamil">ஊறுகாய்</text>
+
+          <!-- bottom dot accent -->
+          <g fill="#b98a2f">
+            <circle cx="200" cy="322" r="2.2"/>
+            <circle cx="190" cy="320" r="1.4"/><circle cx="210" cy="320" r="1.4"/>
+          </g>
+        </svg>
+        <div class="emblem-shadow"></div>
+      </div>
+    </section>
+
+    <div class="stripe-band" aria-hidden="true"></div>
+
+    <section id="story" class="story">
+      <div class="story-grid">
+        <div class="story-visual" aria-hidden="true">
+          <div class="polaroid p1">
+            <div class="polaroid-img i1"></div>
+            <span>Sun-drying maavadu on the terrace</span>
+          </div>
+          <div class="polaroid p2">
+            <div class="polaroid-img i2"></div>
+            <span>Amma's ammi kal</span>
+          </div>
+          <div class="polaroid p3">
+            <div class="polaroid-img i3"></div>
+            <span>The first bharani, 2021</span>
+          </div>
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow eyebrow-dark">எங்கள் கதை · Our Story</p>
+          <h2>It started in Amma's kitchen in Chennai.</h2>
+          <p>
+            Girija learned to make pickles the way most of us learn to breathe — watching her paati on hot Chithirai afternoons, in a red-oxide courtyard that always smelled of gingelly oil, mustard and sun-dried mangoes.
+          </p>
+          <p>
+            What began as gifts to neighbours became a waiting list. Then a kitchen. Then a small brand. But the recipes? The recipes have not changed. Not one mustard seed.
+          </p>
+          <blockquote>
+            "If it doesn't taste like home, we don't ship it."
+            <cite>— அன்புடன், கிரிஜா</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="jars" class="jars">
+      <div class="section-head">
+        <p class="eyebrow">ஊறுகாய் வகைகள் · The Jars</p>
+        <h2>Six varieties. One promise.</h2>
+        <div class="kolam-divider" aria-hidden="true">
+          <svg viewBox="0 0 120 20" width="120" height="20">
+            <g fill="#97392b"><circle cx="60" cy="10" r="3"/><circle cx="46" cy="10" r="2"/><circle cx="74" cy="10" r="2"/><circle cx="34" cy="10" r="1.3"/><circle cx="86" cy="10" r="1.3"/></g>
+            <path d="M 4 10 L 26 10 M 94 10 L 116 10" stroke="#b98a2f" stroke-width="1"/>
+          </svg>
+        </div>
+        <p class="section-sub">Every jar is made in batches of 40 or fewer, in gingelly oil and stone-ground masala. When they're gone, they're gone until next season.</p>
+      </div>
+      <div class="jar-grid">
+        <article class="pickle-card" style="--card-hue: 95;">
+          <span class="tamil-name">மாவடு</span>
+          <h3>Maavadu</h3>
+          <p class="pickle-desc">Tender baby mangoes cured whole in brine, chilli and castor oil. The classic of classics.</p>
+          <div class="pickle-meta">
+            <span class="heat">🌶️🌶️</span>
+            <span class="price">₹320 / 250g</span>
+          </div>
+        </article>
+        <article class="pickle-card" style="--card-hue: 40;">
+          <span class="tamil-name">மாங்காய்</span>
+          <h3>Maangai Oorugai</h3>
+          <p class="pickle-desc">Cut raw mango folded into mustard, fenugreek and cold-pressed gingelly oil.</p>
+          <div class="pickle-meta">
+            <span class="heat">🌶️🌶️🌶️</span>
+            <span class="price">₹340 / 250g</span>
+          </div>
+        </article>
+        <article class="pickle-card" style="--card-hue: 48;">
+          <span class="tamil-name">நார்த்தங்காய்</span>
+          <h3>Narthangai</h3>
+          <p class="pickle-desc">Citron slices salt-cured in the sun for a full season. Sharp, salty, medicinal — Amma's cure for everything.</p>
+          <div class="pickle-meta">
+            <span class="heat">🌶️</span>
+            <span class="price">₹360 / 250g</span>
+          </div>
+        </article>
+        <article class="pickle-card" style="--card-hue: 20;">
+          <span class="tamil-name">பூண்டு</span>
+          <h3>Poondu Oorugai</h3>
+          <p class="pickle-desc">Whole garlic cloves slow-cooked in gingelly oil and tamarind. Fierce, punchy, unforgettable.</p>
+          <div class="pickle-meta">
+            <span class="heat">🌶️🌶️🌶️</span>
+            <span class="price">₹360 / 250g</span>
+          </div>
+        </article>
+        <article class="pickle-card" style="--card-hue: 8;">
+          <span class="tamil-name">மிளகாய் தொக்கு</span>
+          <h3>Milagai Thokku</h3>
+          <p class="pickle-desc">Red chillies ground on the ammi and cooked down slow. For the brave and the curious.</p>
+          <div class="pickle-meta">
+            <span class="heat">🌶️🌶️🌶️🌶️🌶️</span>
+            <span class="price">₹300 / 250g</span>
+          </div>
+        </article>
+        <article class="pickle-card" style="--card-hue: 55;">
+          <span class="tamil-name">எலுமிச்சை</span>
+          <h3>Elumichai</h3>
+          <p class="pickle-desc">Whole lemons, salt and patience. Bright, gentle, comforting — the jar for rainy days.</p>
+          <div class="pickle-meta">
+            <span class="heat">🌶️</span>
+            <span class="price">₹280 / 250g</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="craft" class="craft">
+      <div class="craft-inner">
+        <p class="eyebrow">செய்முறை · How It's Made</p>
+        <h2>Four days. Zero shortcuts.</h2>
+        <ol class="craft-steps">
+          <li>
+            <span class="step-num">01</span>
+            <span class="step-tamil">வெயில்</span>
+            <h3>Sun-cure</h3>
+            <p>Fresh produce is hand-picked, salted with sea salt, and left to cure under the Chennai sun on the terrace.</p>
+          </li>
+          <li>
+            <span class="step-num">02</span>
+            <span class="step-tamil">அரைத்தல்</span>
+            <h3>Stone-grind</h3>
+            <p>Whole spices are dry-roasted in cast iron and ground on the ammi kal the same morning — never pre-mixed.</p>
+          </li>
+          <li>
+            <span class="step-num">03</span>
+            <span class="step-tamil">கலத்தல்</span>
+            <h3>Hand-mix</h3>
+            <p>Girija folds the masala in by hand, in a brass uruli. It's the part no machine has ever done as well.</p>
+          </li>
+          <li>
+            <span class="step-num">04</span>
+            <span class="step-tamil">ஊறவைத்தல்</span>
+            <h3>Rest in bharani</h3>
+            <p>The pickle rests and drinks in the oil inside ceramic bharani jars, then ships within 72 hours.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="order" class="order">
+      <div class="order-card">
+        <div class="order-copy">
+          <p class="eyebrow eyebrow-gold">முன்பதிவு · Order Now</p>
+          <h2>The next batch ships this Friday.</h2>
+          <p>Drop your email and we'll tell you the moment jars are open for pre-order. No spam, no marketing waffle — just pickle news.</p>
+        </div>
+        <form class="order-form" onsubmit="event.preventDefault(); this.querySelector('.form-success').hidden = false; this.querySelector('input').value = '';">
+          <label>
+            <span class="sr-only">Email</span>
+            <input type="email" placeholder="Viswa@gmail.com" required />
+          </label>
+          <button type="submit" class="btn btn-primary">Notify me</button>
+          <p class="form-success" hidden>நன்றி! We'll be in touch before the next batch is jarred. 🥭</p>
+          <div class="order-or"><span>or order straight away</span></div>
+          <a class="btn btn-wa js-wa" href="#">
+            <svg viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 29l8.2-1.6c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 1-4.8-.2-.4c-1-1.6-1.5-3.4-1.5-5.3C4.5 9.5 9.6 4.5 16 4.5S27.5 9.5 27.5 16 22.4 24.8 16 24.8zm6.5-8.3c-.4-.2-2.1-1-2.4-1.1-.3-.1-.6-.2-.8.2s-.9 1.1-1.1 1.3c-.2.2-.4.3-.8.1-.4-.2-1.5-.6-2.9-1.8-1.1-1-1.8-2.2-2-2.6-.2-.4 0-.6.2-.8.2-.2.4-.4.5-.7.2-.2.2-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.5-.3.4-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.5 3.8 6 5.3.8.4 1.5.6 2 .8.8.3 1.6.2 2.2.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.6.2-1.7-.1-.2-.3-.3-.7-.5z"/></svg>
+            Order on WhatsApp
+          </a>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="stripe-band stripe-band-tall" aria-hidden="true"></div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>Pickles by Girija</strong>
+        <span class="footer-tamil">கிரிஜா வீட்டு ஊறுகாய்</span>
+        <p>Made in a small Chennai kitchen. Shipped across India.</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>Visit</h4>
+          <p>Girija's Kitchen<br />12/A, Sivakamipuram 2nd Cross St,<br />Adyar, Chennai, Tamil Nadu</p>
+        </div>
+        <div>
+          <h4>Talk</h4>
+          <p>picklesbygirija@gmail.com<br />+91 8248160132</p>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <p><a href="#">Instagram</a><br /><a href="#" class="js-wa">WhatsApp</a></p>
+        </div>
+      </div>
+    </div>
+    <p class="copy">© 2026 Pickles by Girija · அன்புடன் செய்யப்பட்டது (made with love)</p>
+  </footer>
+
+  <!-- mobile-only sticky order bar (revealed after the hero scrolls past) -->
+  <div class="mobile-order-bar">
+    <div class="mob-bar-info">
+      <strong>Pickles by Girija</strong>
+      <span>Fresh batch ships Friday 🥭</span>
+    </div>
+    <a class="btn btn-wa js-wa" href="#">
+      <svg viewBox="0 0 32 32" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 29l8.2-1.6c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 1-4.8-.2-.4c-1-1.6-1.5-3.4-1.5-5.3C4.5 9.5 9.6 4.5 16 4.5S27.5 9.5 27.5 16 22.4 24.8 16 24.8zm6.5-8.3c-.4-.2-2.1-1-2.4-1.1-.3-.1-.6-.2-.8.2s-.9 1.1-1.1 1.3c-.2.2-.4.3-.8.1-.4-.2-1.5-.6-2.9-1.8-1.1-1-1.8-2.2-2-2.6-.2-.4 0-.6.2-.8.2-.2.4-.4.5-.7.2-.2.2-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.5-.3.4-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.5 3.8 6 5.3.8.4 1.5.6 2 .8.8.3 1.6.2 2.2.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.6.2-1.7-.1-.2-.3-.3-.7-.5z"/></svg>
+      Order
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
